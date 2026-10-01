@@ -61,7 +61,7 @@ uslubda yoziladi. Matn avvalo `materiallar/adabiyotlar/` dagi manbalarga tayanad
 ## 5. Tuzilma
 
 ```
-MUNDARIJA
+REJA
 I. Kirish
 II. Asosiy qism
    2.1. [Birinchi bo'lim nomi]
@@ -71,8 +71,9 @@ III. Xulosa
 IV. Foydalanilgan adabiyotlar
 ```
 
-- Mundarijada har bir band qarshisida sahifa raqami; band nomi va raqam orasida nuqtalar,
-  raqam o'ng chetda tekislangan.
+- Sarlavha **REJA** (MUNDARIJA emas); bandlar qarshisida **bet raqamlari va nuqtalar yo'q**.
+  _Vaqtinchalik: kurs ishi rahbari tasdiqlagach aniqlashtiriladi. Bet raqamli mundarijaga qaytish
+  kerak bo'lsa — `dastur/yigish.py` da `REJA_BET_RAQAMI = True`._
 - Bob sarlavhalari (`I. KIRISH` ...): qalin, bosh harflarda, markazda.
 - Bo'lim sarlavhalari (`2.1. ...`): qalin, markazda.
 

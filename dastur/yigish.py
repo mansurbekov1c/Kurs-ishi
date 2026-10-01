@@ -28,6 +28,7 @@ from lxml import etree
 DASTUR = os.path.dirname(os.path.abspath(__file__))
 REPO = os.path.dirname(DASTUR)
 LOGO = os.path.join(REPO, "shablon", "logo.png")
+REJA_BET_RAQAMI = False  # yoriqnoma.md 5-bo'lim: hozircha REJA, bet raqamlarisiz
 
 M_NS = "http://schemas.openxmlformats.org/officeDocument/2006/math"
 W_NS = "http://schemas.openxmlformats.org/wordprocessingml/2006/main"
@@ -315,19 +316,24 @@ class Quruvchi:
         p = self.para(WD_ALIGN_PARAGRAPH.CENTER, False, 1.0, oldin=self.toc_betlar.get("_muqova", 60))
         self.run(p, f"Urganch-{i['Yil']}.", bold=True)
 
-    # --- mundarija
+    # --- reja (mundarija)
+    # REJA_BET_RAQAMI = True bo'lsa: sarlavha "MUNDARIJA", nuqtalar va bet raqamlari bilan.
+    # Hozircha (rahbar tasdig'igacha): sarlavha "REJA", bet raqamlari va nuqtalarsiz.
     def mundarija(self, bloklar):
         p = self.para(WD_ALIGN_PARAGRAPH.CENTER, False, keyin=12)
         p.paragraph_format.page_break_before = True
-        self.run(p, "MUNDARIJA", bold=True)
+        self.run(p, "MUNDARIJA" if REJA_BET_RAQAMI else "REJA", bold=True)
         for b in bloklar:
             if b[0] not in ("bob", "bolim"):
                 continue
             p = self.para(WD_ALIGN_PARAGRAPH.LEFT, False)
             p.paragraph_format.left_indent = Cm(0 if b[0] == "bob" else 0.8)
-            p.paragraph_format.tab_stops.add_tab_stop(Cm(MATN_ENI), WD_TAB_ALIGNMENT.RIGHT, WD_TAB_LEADER.DOTS)
-            bet = self.toc_betlar.get(b[1], "0")
-            self.run(p, f"{b[1]}\t{bet}")
+            if REJA_BET_RAQAMI:
+                p.paragraph_format.tab_stops.add_tab_stop(Cm(MATN_ENI), WD_TAB_ALIGNMENT.RIGHT, WD_TAB_LEADER.DOTS)
+                bet = self.toc_betlar.get(b[1], "0")
+                self.run(p, f"{b[1]}\t{bet}")
+            else:
+                self.run(p, b[1])
 
     # --- asosiy matn
     def asosiy(self, bloklar):

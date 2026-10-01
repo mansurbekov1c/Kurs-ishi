@@ -6,7 +6,7 @@
    - sarlavhalar betning oxirida yolg'iz qolmagan;
    - jadvallar va chizmalar sinmagan, ostidagi nomi va raqami bor;
    - formulalar to'g'ri ko'rinadi va raqamlangan.
-3. Mundarijadagi sahifa raqamlari haqiqiy betlarga mos.
+3. Reja: sarlavha REJA, bandlar bob/bo'lim nomlariga mos, bet raqamlari va nuqtalar yo'q.
 4. Formatlash `yoriqnoma.md` ga mos (hoshiya, shrift, interval, sahifa raqami).
 5. Titul varag'idagi ma'lumotlar `malumot.md` bilan bir xil.
 6. Matndagi har bir chizma, formula va adabiyotga havola mavjud raqamga ishora qiladi.
@@ -21,3 +21,7 @@
 
 Yakuniy tekshiruvni va PDF'ni foydalanuvchi o'zi Word'da qiladi. Claude faqat .docx ni yig'adi va
 LibreOffice bilan yuqoridagi tekshiruvni bajaradi — kompyuterda Word'ni ochib tekshirmaydi.
+Sinov (Abdullayeva Lobar, 2026-10-01): LibreOffice PDF Word PDF bilan bir xil emas — shriftlar
+almashadi (Liberation Serif, OpenSymbol), formulalar kichikroq, qator va bet bo'linishlari farq
+qiladi. Shuning uchun yakuniy PDF'ni foydalanuvchi Word'da ("Save As → PDF") yasaydi; LibreOffice
+PDF faqat ichki tekshiruv uchun (`manba/tekshiruv/`).
