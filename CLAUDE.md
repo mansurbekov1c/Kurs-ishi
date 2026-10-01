@@ -7,19 +7,16 @@ dasturini saqlaydi. Ish papkasi — bitta yuqoridagi `kurs_ishi/` (u yerdagi kic
 
 ## Umumiy talablar
 
-- Hajmi: har bir kurs ishi o'rtacha **25 bet**.
-- Har bir kurs ishida **3–5 ta chizma**.
-- Mavzuga doir **formulalar** bo'ladi.
+- Hajmi: muqova bilan **25–28 bet**, har bir bet oxirigacha to'ldiriladi.
+- Har bir kurs ishida **3–5 ta rasm** (chizma, diagramma, sxema, grafik).
+- Mavzuga doir **formulalar** — Professional ko'rinishda, ketma-ket raqamlangan.
 - Tafsilotlar quyidagi fayllarda:
 
-| Fayl | Mazmuni | Holati |
-|---|---|---|
-| `qoidalar/formatlash.md` | hoshiya, shrift, interval, sahifa raqami, sarlavhalar | yo'riqnoma kelgach to'ldiriladi |
-| `qoidalar/tuzilma.md` | titul, mundarija, kirish, boblar, xulosa, adabiyotlar, ilovalar | yo'riqnoma kelgach to'ldiriladi |
-| `qoidalar/chizmalar.md` | chizma turi, raqamlash, nomlash | yo'riqnoma kelgach to'ldiriladi |
-| `qoidalar/formulalar.md` | formula yozish va raqamlash | yo'riqnoma kelgach to'ldiriladi |
-| `qoidalar/adabiyotlar.md` | adabiyotlar ro'yxatini rasmiylashtirish | yo'riqnoma kelgach to'ldiriladi |
-| `qoidalar/sifat-tekshiruvi.md` | topshirishdan oldingi tekshiruv | tayyor |
+| Fayl | Mazmuni |
+|---|---|
+| `qoidalar/yoriqnoma.md` | **asosiy yo'riqnoma**: muqova, tuzilma, formatlash, formulalar, rasmlar, adabiyotlar |
+| `qoidalar/sifat-tekshiruvi.md` | topshirishdan oldingi tekshiruv |
+| `shablon/logo.png` | universitet logosi (muqova uchun) |
 
 ## Ish usuli
 
