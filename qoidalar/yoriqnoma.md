@@ -1,18 +1,19 @@
 # Kurs ishi yozish bo'yicha yo'riqnoma
 
-## 0. Kirish ma'lumotlari (har bir talaba uchun)
+## 0. Kirish ma'lumotlari
 
-| Maydon | Misol |
+Har bir talaba beradi: **Familiya Ism, guruh, fan, mavzu, rahbar.**
+
+Standart qiymatlar (talaba boshqacha bermasa shular ishlatiladi):
+
+| Maydon | Standart qiymat |
 |---|---|
 | Fakultet | Fizika-matematika |
 | Kafedra | Fizika |
 | Yo'nalish | Mexanika va matematik modellashtirish |
-| Guruh | 242 |
-| Fan | Nazariy mexanika |
-| Mavzu | Ferma hisobi |
-| Talaba | Familiya Ism |
-| Rahbar | Familiya Ism |
-| Yil | 2026 |
+| Yil | joriy yil |
+
+Fakultet, kafedra, yo'nalish, guruh va yil muqovada yoziladi (4-bo'lim).
 
 Kurs ishi Urganch davlat universiteti talabasi nomidan, o'zbek tilida (lotin yozuvi), ilmiy
 uslubda yoziladi. Matn avvalo `materiallar/adabiyotlar/` dagi manbalarga tayanadi.

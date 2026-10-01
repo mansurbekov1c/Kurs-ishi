@@ -20,10 +20,10 @@ dasturini saqlaydi. Ish papkasi — bitta yuqoridagi `kurs_ishi/` (u yerdagi kic
 
 ## Ish usuli
 
-- Matn `talabalar/familiya-ism/matn/` da bo'limlarga bo'lib yoziladi; .docx har doim shu manbadan
+- Matn `talabalar/N.Familiya_Ism/manba/matn/` da bo'limlarga bo'lib yoziladi; .docx har doim shu manbadan
   `dastur/` orqali qayta yig'iladi. Tayyor .docx qo'lda tahrirlanmaydi.
 - Formulalar Word'ning o'z formulasi (OMML) sifatida qo'yiladi, rasm sifatida emas.
-- Chizmalar kod orqali chiziladi; manba kodi talaba papkasidagi `chizmalar/` da saqlanadi.
+- Chizmalar kod orqali chiziladi; manba kodi talaba papkasidagi `manba/chizmalar/` da saqlanadi.
 - Har bir tayyor fayl `qoidalar/sifat-tekshiruvi.md` bo'yicha tekshiriladi.
 
 ## Qoidalarni yangilash
