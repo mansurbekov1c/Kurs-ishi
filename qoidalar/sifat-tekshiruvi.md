@@ -15,7 +15,8 @@
 8. Formulalar Professional ko'rinishda (kasr, indeks, daraja haqiqiy), raqamlari o'ng chetda,
    ketma-ket va takrorlanmagan.
 9. Rasmlar soni 3–5 ta, nomlari `N.M-rasm. Nomi` tuzilishida, rasm ostida.
-10. Adabiyotlar haqiqiy (internetdan olinganlari tekshirilgan).
+10. Adabiyotlar haqiqiy: berilgan va internetdan topilgan manbalar aralash, internetdan olinganlari
+    tekshirilgan va `malumot.md` da havolasi bor; har biri matnda ishlatilgan.
 
 ## Word'da tekshirish
 

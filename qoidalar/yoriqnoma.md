@@ -16,7 +16,8 @@ Standart qiymatlar (talaba boshqacha bermasa shular ishlatiladi):
 Fakultet, kafedra, yo'nalish, guruh va yil muqovada yoziladi (4-bo'lim).
 
 Kurs ishi Urganch davlat universiteti talabasi nomidan, o'zbek tilida (lotin yozuvi), ilmiy
-uslubda yoziladi. Matn avvalo `materiallar/adabiyotlar/` dagi manbalarga tayanadi.
+uslubda yoziladi. Matn foydalanuvchi bergan adabiyotlarga (`materiallar/adabiyotlar/`) **va internetdan
+topilgan manbalarga** birgalikda tayanadi (11-bo'lim).
 
 ## 1. Fayl va hajm
 
@@ -129,12 +130,22 @@ Har bir bo'lim natijasi raqamlangan bandlarda (1, 2, 3, ...), kamida 7 band.
 
 ## 11. Foydalanilgan adabiyotlar
 
-- 8–10 ta manba (darslik, monografiya, qo'llanma, maqola).
-- Avval foydalanuvchi bergan manbalar (`materiallar/adabiyotlar/`), yetmasa internetdan.
-- Faqat haqiqatan mavjud manbalar: internetdan olinganining muallifi, nomi, nashriyoti va yili
-  tekshiriladi. To'qib chiqarilgan manba yozilmaydi.
+- 8–10 ta manba (darslik, monografiya, o'quv qo'llanma, ilmiy maqola).
+- **Faqat berilgan adabiyotlar bilan cheklanilmaydi.** Har bir kurs ishi uchun internetdan ham
+  mavzuga mos manbalar faol qidiriladi va matnda foydalaniladi: o'zbek, rus va ingliz tilidagi
+  darsliklar, universitet o'quv qo'llanmalari, ilmiy maqolalar (masalan, ziyonet.uz, OTM
+  saytlari, elibrary.ru, Google Scholar, arxiv.org, nashriyot saytlari).
+- Ro'yxatda berilgan va internetdan topilgan manbalar aralash bo'ladi; mavzuga bevosita mos
+  kelgan berilgan adabiyotlar albatta kiritiladi.
+- Faqat haqiqatan mavjud manbalar: internetdan olinganining muallifi, nomi, nashriyoti/jurnali va
+  yili manba sahifasida tekshiriladi. To'qib chiqarilgan manba yozilmaydi.
+- Ro'yxatdagi har bir manba matnda haqiqatan ishlatilgan bo'ladi (ta'rif, formula, masala yoki
+  tarixiy ma'lumot shu manbadan olingan).
+- Internetdan olingan manbalar talaba papkasidagi `manba/malumot.md` ga havolasi bilan yoziladi
+  (keyingi tuzatishlarda kerak bo'ladi).
 - Ko'rinishi:
   `1. Targ S.M. Nazariy mexanikadan qisqa qo'llanma. — Moskva: Vysshaya shkola, 1986. — 416 b.`
+  `2. Goldstein H., Poole C., Safko J. Classical Mechanics. — 3rd ed. — Addison Wesley, 2002. — 638 p.`
 
 ## 12. Til
 
