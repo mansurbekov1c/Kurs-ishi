@@ -377,9 +377,19 @@ class Quruvchi:
 
 
 # ----------------------------------------------------------------------------- PDF tekshiruvi
+def soffice_yoli():
+    """Windows'da soffice.exe PDF tayyor bo'lmasdan qaytadi — konsol varianti soffice.com ishlatiladi."""
+    if os.name == "nt":
+        for yol in (shutil.which("soffice.com"),
+                    r"C:\Program Files\LibreOffice\program\soffice.com"):
+            if yol and os.path.exists(yol):
+                return yol
+    return "soffice"
+
+
 def pdfga(docx, papka):
     os.makedirs(papka, exist_ok=True)
-    subprocess.run(["soffice", "--headless", "--convert-to", "pdf", "--outdir", papka, docx],
+    subprocess.run([soffice_yoli(), "--headless", "--convert-to", "pdf", "--outdir", papka, docx],
                    check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
     return os.path.join(papka, os.path.splitext(os.path.basename(docx))[0] + ".pdf")
 
