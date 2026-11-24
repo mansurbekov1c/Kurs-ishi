@@ -17,6 +17,7 @@ dasturini saqlaydi. Ish papkasi — bitta yuqoridagi `kurs_ishi/` (u yerdagi kic
 | `qoidalar/yoriqnoma.md` | **asosiy yo'riqnoma**: muqova, tuzilma, formatlash, formulalar, rasmlar, adabiyotlar |
 | `qoidalar/sifat-tekshiruvi.md` | topshirishdan oldingi tekshiruv |
 | `shablon/logo.png` | universitet logosi (muqova uchun) |
+| `latex/` | **LaTeX ishlari** (alohida bo'lim, natija PDF): `latex/README.md` dan boshlanadi |
 
 ## Ish usuli
 
