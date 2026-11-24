@@ -1,18 +1,20 @@
 # LaTeX ishi — Codex uchun ko'rsatma
 
-Sen `kurs_ishi/latex/` papkasida talaba uchun ishni **LaTeX'da** yozasan va tayyor **PDF** yasaysan.
-Vazifa `talabalar/N.Familiya_Ism/topshiriq.md` da beriladi (papka, anketa, adabiyotlar tanlovi va
+Sen LaTeX bo'limidagi (`kurs_ishi/latex/`) talaba uchun ishni **LaTeX'da** yozasan va tayyor **PDF** yasaysan.
+Vazifa `latex/talabalar/N.Familiya_Ism/topshiriq.md` da beriladi (papka, anketa, adabiyotlar tanlovi va
 topshiriqni Claude tayyorlaydi; matn, chizmalar, `.tex` va PDF'ni SEN tayyorlaysan).
 Ish davomida foydalanuvchidan savol so'rama: eng oqilona qarorni o'zing qabul qil va `manba/hisobot.md` ga yoz.
-Yo'llar `kurs_ishi/latex/` ga nisbatan; repo `../Kurs-ishi/`.
+Sen `kurs_ishi/` papkasida ishga tushirilasan (Windows sandbox ish papkasidan tashqarini o'qiy olmaydi) —
+barcha yo'llar `kurs_ishi/` ga nisbatan. `AGENTS.md` (Word kurs ishlari) bu vazifaga TEGISHLI EMAS.
 
 ## 1. Boshlashdan oldin o'qi (to'liq)
 
-1. `../Kurs-ishi/latex/yoriqnoma.md` — ASOSIY: mustaqil ish shakli, muqova, tuzilma, format, tekshiruv.
-2. `../Kurs-ishi/qoidalar/yoriqnoma.md` — faqat 11 (adabiyotlar) va 12 (til) bo'limlari.
-3. `../Kurs-ishi/latex/shablon/` — `asosiy.tex` bo'lsa, ish SHU shablondan boshlanadi.
-4. `materiallar/adabiyotlar-royxati.md` va `materiallar/namuna/` — kitoblar va namuna ish (shakl uchun).
-5. `talabalar/N.Familiya_Ism/topshiriq.md` va `manba/malumot.md`.
+1. `Kurs-ishi/latex/yoriqnoma.md` — ASOSIY: mustaqil ish shakli, muqova, tuzilma, format, tekshiruv.
+2. `Kurs-ishi/qoidalar/yoriqnoma.md` — faqat 11 (adabiyotlar) va 12 (til) bo'limlari.
+3. `Kurs-ishi/latex/shablon/` — ish SHU shablondan boshlanadi: papkani butunligicha `manba/tex/` ga nusxala,
+   `asosiy.tex` → `main.tex`, `malumot.tex` ni to'ldir (shablon `README.md` siga qara).
+4. `latex/materiallar/adabiyotlar-royxati.md` va `latex/materiallar/namuna/` — kitoblar va namuna ish (shakl uchun).
+5. `latex/talabalar/N.Familiya_Ism/topshiriq.md` va `manba/malumot.md`.
 
 Ustunlik: `topshiriq.md` > `latex/yoriqnoma.md` > umumiy `yoriqnoma.md`.
 
@@ -26,7 +28,7 @@ Hech narsani o'zing o'rnatma (MiKTeX paketlari ham — sandbox'da tarmoq yo'q). 
 
 ## 3. Fayllar qayerga (qat'iy)
 
-Faqat `talabalar/N.Familiya_Ism/` ichiga yoz:
+Faqat `latex/talabalar/N.Familiya_Ism/` ichiga yoz:
 ```
 N.Familiya_Ism/
 ├── Familiya_Ism.pdf          ← tayyor ish
@@ -41,7 +43,7 @@ N.Familiya_Ism/
     ├── hisob/                ← raqamli hisob kodi va natijalari (bo'lsa)
     └── tekshiruv/            ← vaqtinchalik: .log, .aux, bet rasmlari; ish oxirida tozalanadi
 ```
-Boshqa joyga yozma. `../Kurs-ishi/` va `materiallar/` — FAQAT O'QISH. Boshqa talabalar papkasiga tegma.
+Boshqa joyga yozma. `Kurs-ishi/` va `latex/materiallar/` — FAQAT O'QISH. Boshqa talabalar papkasiga tegma.
 
 ## 4. Ish tartibi
 
@@ -58,7 +60,7 @@ Boshqa joyga yozma. `../Kurs-ishi/` va `materiallar/` — FAQAT O'QISH. Boshqa t
    `xelatex -interaction=nonstopmode -halt-on-error -output-directory=../tekshiruv main.tex` — 2 marta
    (havolalar uchun; adabiyotlar BibTeX bo'lsa orasida `bibtex`). Natija `../tekshiruv/main.pdf` →
    `Familiya_Ism.pdf` qilib talaba papkasi tepasiga nusxala.
-6. **Tekshir.** `../Kurs-ishi/latex/yoriqnoma.md`, 7-bo'lim bo'yicha: logni o'qi, har bir betni rasm qilib ko'r,
+6. **Tekshir.** `Kurs-ishi/latex/yoriqnoma.md`, 7-bo'lim bo'yicha: logni o'qi, har bir betni rasm qilib ko'r,
    topilgan xatoni tuzatib qayta kompilyatsiya qil (5 martagacha).
 7. **Zip.** `manba/tex/` ni (faqat .tex, .bib, rasmlar) `Familiya_Ism_overleaf.zip` qilib joyla.
 8. **Tozalash.** `manba/tekshiruv/` ni o'chir (yoki faqat oxirgi .log qoldir).

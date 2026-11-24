@@ -32,17 +32,26 @@ Word kurs ishlari tartibi (`kurs_ishi/CLAUDE.md`) bilan bir xil, faqat papkalar 
 5. `Kurs-ishi/latex/topshiriq-andoza.md` bo'yicha `latex/talabalar/N.Familiya_Ism/topshiriq.md` ni yoz.
 6. Codex'ni ishga tushir (pastda), tugashini kut, natijani tekshir.
 
-### Codex buyrug'i (`kurs_ishi/latex` papkasida)
+### Codex buyrug'i (`kurs_ishi` papkasida — `latex/` da EMAS)
 
 ```
-codex exec -m gpt-6.1-sol -c model_reasoning_effort=high --sandbox workspace-write --skip-git-repo-check -o talabalar/N.Familiya_Ism/manba/codex-oxirgi-xabar.txt "AGENTS.md ni to'liq o'qi, keyin talabalar/N.Familiya_Ism/topshiriq.md dagi vazifani unga ko'ra oxirigacha bajar."
+codex exec -m gpt-6.1-sol -c model_reasoning_effort=high --sandbox workspace-write --skip-git-repo-check -o latex/talabalar/N.Familiya_Ism/manba/codex-oxirgi-xabar.txt "Kurs-ishi/latex/codex.md ni to'liq o'qi (kurs_ishi/AGENTS.md bu vazifaga tegishli emas), keyin latex/talabalar/N.Familiya_Ism/topshiriq.md dagi vazifani unga ko'ra oxirigacha bajar."
 ```
 
-- Codex `latex/` papkasida ishga tushadi: sandbox faqat shu papkaga yozishga ruxsat beradi, `../Kurs-ishi`
-  va Word bo'limiga yozolmaydi.
+- Nega `kurs_ishi` da: Codex'ning Windows sandbox'i ish papkasidan tashqaridagi fayllarni O'QIY OLMAYDI
+  (2026-11-24 sinovda namuna PDF'ni ocholmadi). `latex/` da ishga tushsa `Kurs-ishi/` qoidalarini ko'rmaydi.
+- **Sandbox ichida `xelatex.exe` ishlamaydi** ("Access is denied", 2026-11-24). Hal bo'lguncha (pastdagi
+  "Kompilyatsiya" ga qara) Codex PDF yasay olmaydi — buni topshiriqda ayt.
 - Claude'ning shelli MiKTeX o'rnatilishidan oldin ochilgan bo'lsa, PATH'ga qo'sh:
   `%LOCALAPPDATA%\Programs\MiKTeX\miktex\bin\x64`.
 - Internet manbalari uchun: `-c sandbox_workspace_write.network_access=true`.
+
+### Kompilyatsiya (sandbox muammosi hal bo'lguncha)
+
+Codex `.tex`, rasmlar, hisob kodini yozadi va o'zi tekshira oladigan narsalarni (Python bilan hisob,
+`\ref`/`\label` mosligi) tekshiradi. PDF'ni **Claude** yasaydi: `manba/tex/` da `xelatex` 2 marta
+(`-output-directory=../tekshiruv`), logdagi xatolar va bet rasmlaridagi kamchiliklar `tuzatish.md` ga yoziladi va
+Codex qayta ishga tushiriladi. Keyin PDF va Overleaf zip'ni Claude joylaydi.
 
 ## Codex tugagach
 
