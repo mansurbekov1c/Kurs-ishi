@@ -1,0 +1,97 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[left=3cm,right=1.5cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{fontspec}
+\setmainfont{cmunrm.otf}[
+  BoldFont=cmunbx.otf,
+  ItalicFont=cmunti.otf,
+  BoldItalicFont=cmunbi.otf
+]
+\usepackage{setspace}
+\usepackage{indentfirst}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[labelsep=period,justification=centering]{caption}
+\usepackage[normalem]{ulem}
+
+\onehalfspacing
+\setlength{\parindent}{1.25cm}
+\setlength{\parskip}{0pt}
+% Tutuq belgili (’) so'zlar bo'g'inlarga bo'linmaydi — qator chetdan chiqmasligi uchun.
+\setlength{\emergencystretch}{3em}
+\tolerance=2000
+\pagestyle{plain}
+\graphicspath{{rasmlar/}}
+\renewcommand{\contentsname}{MUNDARIJA}
+\renewcommand{\refname}{FOYDALANILGAN ADABIYOTLAR}
+\renewcommand{\figurename}{Rasm}
+\renewcommand{\tablename}{Jadval}
+\captionsetup{font=normalsize}
+\captionsetup[table]{position=top}
+
+% Boblar rim, bo’limlar arab raqamida; boshqa hisoblagichlar uzluksiz.
+\renewcommand{\thesection}{\Roman{section} BOB.}
+\renewcommand{\thesubsection}{\arabic{section}.\arabic{subsection}}
+\makeatletter
+\renewcommand{\section}{\@startsection{section}{1}{0pt}%
+  {-3.5ex plus -1ex minus -.2ex}{2.3ex plus .2ex}%
+  {\centering\normalfont\large\bfseries}}
+\renewcommand{\subsection}{\@startsection{subsection}{2}{0pt}%
+  {-3.25ex plus -1ex minus -.2ex}{1.5ex plus .2ex}%
+  {\normalfont\normalsize\bfseries}}
+\renewcommand{\@seccntformat}[1]{\csname the#1\endcsname.\quad}
+% Asosiy satrlar ham nuqta va bet raqami bilan chiqariladi.
+\renewcommand{\l@section}[2]{%
+  \@dottedtocline{1}{0em}{5em}{\bfseries #1}{\bfseries #2}}
+\renewcommand{\l@subsection}[2]{%
+  \@dottedtocline{2}{1.5em}{3em}{#1}{#2}}
+\makeatother
+\setcounter{tocdepth}{2}
+\newcommand{\bob}[1]{%
+  \clearpage
+  \refstepcounter{section}%
+  \setcounter{subsection}{0}%
+  \section*{\thesection\ #1}%
+  \addcontentsline{toc}{section}{\thesection\ #1}}
+
+\input{malumot.tex}
+
+\begin{document}
+% titlepage muhiti ishlatilmaydi: muqova 1, mundarija 2 deb sanaladi.
+\thispagestyle{empty}
+\begin{center}
+  {\bfseries O’ZBEKISTON RESPUBLIKASI TA’LIM VA ILM FAN VAZIRLIGI\par}
+  \vspace{0.4cm}
+  {\bfseries ABU RAYXON BERUNIY NOMIDAGI URGANCH DAVLAT UNIVERSITETI\par}
+  \vspace{0.4cm}
+  {\bfseries \MakeUppercase{\Fakultet}\ FAKULTETI\par}
+  \vspace{0.4cm}
+  {\bfseries “\MakeUppercase{\Kafedra}” KAFEDRASI\par}
+  \vspace{1.8cm}
+  {\itshape \Fan\ fanidan\par}
+  \vspace{0.8cm}
+  {\LARGE\bfseries MUSTAQIL ISH\par}
+\end{center}
+\vspace{0.8cm}
+\noindent\textbf{Mavzu:} \expandafter\uline\expandafter{\Mavzu}\par
+\vspace{1.4cm}
+\noindent\hfill
+\begin{minipage}{0.52\textwidth}
+  \raggedright
+  Bajardi: \Guruh-\Yonalish\ -- guruh talabasi\par
+  \Talaba\par
+  \vspace{0.8cm}
+  Tekshirdi: \Rahbar\par
+\end{minipage}
+\par\vfill
+\begin{center}
+  Urganch -- \Yil
+\end{center}
+\clearpage
+
+\tableofcontents
+\input{bolimlar/01_kirish.tex}
+\input{bolimlar/02_bob1.tex}
+\input{bolimlar/03_bob2.tex}
+\input{bolimlar/04_xulosa.tex}
+\input{bolimlar/05_adabiyotlar.tex}
+\end{document}
