@@ -8,8 +8,8 @@ Yo'llar `kurs_ishi/latex/` ga nisbatan; repo `../Kurs-ishi/`.
 
 ## 1. Boshlashdan oldin o'qi (to'liq)
 
-1. `../Kurs-ishi/latex/yoriqnoma.md` — LaTeX ishi qoidalari va Word'dan farqlar.
-2. `../Kurs-ishi/qoidalar/yoriqnoma.md` — umumiy mazmun qoidalari (LaTeX yoriqnomasi unga tayanadi).
+1. `../Kurs-ishi/latex/yoriqnoma.md` — ASOSIY: mustaqil ish shakli, muqova, tuzilma, format, tekshiruv.
+2. `../Kurs-ishi/qoidalar/yoriqnoma.md` — faqat 11 (adabiyotlar) va 12 (til) bo'limlari.
 3. `../Kurs-ishi/latex/shablon/` — `asosiy.tex` bo'lsa, ish SHU shablondan boshlanadi.
 4. `materiallar/adabiyotlar-royxati.md` va `materiallar/namuna/` — kitoblar va namuna ish (shakl uchun).
 5. `talabalar/N.Familiya_Ism/topshiriq.md` va `manba/malumot.md`.
@@ -50,14 +50,15 @@ Boshqa joyga yozma. `../Kurs-ishi/` va `materiallar/` — FAQAT O'QISH. Boshqa t
 2. **Internet** (tarmoq bo'lsa): umumiy yoriqnoma 11-bo'lim. Manba, muallif, yil, sahifani hech qachon TO'QIMA.
 3. **Matn.** `manba/tex/bolimlar/` da bo'limlarga bo'lib yoz (`01_kirish.tex`, `02_1_....tex`, ..., `04_adabiyotlar.tex`),
    `main.tex` ularni `\input` bilan ulaydi. Hajm va tuzilma — yoriqnoma va namuna bo'yicha.
-   Masalalardagi barcha raqamli natijalarni Python bilan hisoblab tekshir.
+   Topshiriqdagi mavzuning 15 ta mustaqil masalasining HAMMASI yechiladi. Har bir javobni Python (sympy/numpy)
+   bilan tekshir (`manba/hisob/`) va to'plamdagi javob (bo'lsa) bilan solishtir; farqni izohla, yashirma.
 4. **Chizmalar.** Yoriqnomadagi soni; matplotlib (300 dpi, oq fon, rasm ichida sarlavha yo'q, yozuvlar o'zbekcha) yoki TikZ.
    Har biri matnda `\ref` bilan havola qilinib izohlanadi.
 5. **Kompilyatsiya.** `manba/tex/` ichida:
    `xelatex -interaction=nonstopmode -halt-on-error -output-directory=../tekshiruv main.tex` — 2 marta
    (havolalar uchun; adabiyotlar BibTeX bo'lsa orasida `bibtex`). Natija `../tekshiruv/main.pdf` →
    `Familiya_Ism.pdf` qilib talaba papkasi tepasiga nusxala.
-6. **Tekshir.** `../Kurs-ishi/latex/yoriqnoma.md`, 3-bo'lim bo'yicha: logni o'qi, har bir betni rasm qilib ko'r,
+6. **Tekshir.** `../Kurs-ishi/latex/yoriqnoma.md`, 7-bo'lim bo'yicha: logni o'qi, har bir betni rasm qilib ko'r,
    topilgan xatoni tuzatib qayta kompilyatsiya qil (5 martagacha).
 7. **Zip.** `manba/tex/` ni (faqat .tex, .bib, rasmlar) `Familiya_Ism_overleaf.zip` qilib joyla.
 8. **Tozalash.** `manba/tekshiruv/` ni o'chir (yoki faqat oxirgi .log qoldir).

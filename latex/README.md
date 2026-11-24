@@ -24,7 +24,9 @@ Word kurs ishlari tartibi (`kurs_ishi/CLAUDE.md`) bilan bir xil, faqat papkalar 
 1. Anketani tekshir (Familiya Ism, guruh, fan, mavzu, rahbar; `kurs_ishi/talaba-anketa.md`); yetishmasa so'ra.
 2. `latex/talabalar/N.Familiya_Ism/manba/` ni yarat (N = `latex/talabalar/` dagi eng katta raqam + 1),
    `manba/malumot.md` ga anketani jadval qilib yoz.
-3. Adabiyotlarni `latex/materiallar/adabiyotlar-royxati.md` dan tanla. "Tekshirilmagan" bo'lsa —
+3. Mavzuni amaliy to'plamdagi (`3_mex (1).pdf`) mavzulardan biriga bog'la — ro'yxat va bet raqamlari
+   `adabiyotlar-royxati.md` da. Mos mavzu topilmasa, foydalanuvchidan so'ra (15 masala shu yerdan olinadi).
+   Adabiyotlarni `latex/materiallar/adabiyotlar-royxati.md` dan tanla. "Tekshirilmagan" bo'lsa —
    PDF mundarijasini o'qib ro'yxatni to'ldir. Papkada yo'q kitobni bor deb atama.
 4. Bo'lim nomlari berilmagan bo'lsa taklif qil (topshiriqqa yoz, tasdiq kutib turma).
 5. `Kurs-ishi/latex/topshiriq-andoza.md` bo'yicha `latex/talabalar/N.Familiya_Ism/topshiriq.md` ni yoz.
@@ -47,10 +49,10 @@ codex exec -m gpt-6.1-sol -c model_reasoning_effort=high --sandbox workspace-wri
 1. `manba/hisobot.md` ni o'qi; `Familiya_Ism.pdf` va `Familiya_Ism_overleaf.zip` tepada, qolgani `manba/` da
    ekanini tekshir; `manba/tekshiruv/` tozalangan; `Kurs-ishi/` ga hech narsa tushmagan
    (`git --no-optional-locks status`).
-2. PDF betlarini rasm qilib o'zing ko'r (`yoriqnoma.md`, 3-bo'lim) — Codex'ning "o'tdi" degani yetarli emas.
+2. PDF betlarini rasm qilib o'zing ko'r (`yoriqnoma.md`, 7-bo'lim) — Codex'ning "o'tdi" degani yetarli emas.
 3. Xato bo'lsa `tuzatish.md` yoz va Codex'ni qayta ishga tushir (oxirgi gap: "...tuzatish.md dagi tuzatishni bajar").
 
-## Namuna kelganda (bir martalik ish)
+## Namuna kelganda (bir martalik ish — 2026-11-24 bajarildi, yangi namuna kelsa takrorlanadi)
 
 1. Namunani (`latex/materiallar/namuna/`) o'qi: muqova, tuzilma, shrift, hoshiya, raqamlash, adabiyotlar shakli.
 2. Farqlarni `Kurs-ishi/latex/yoriqnoma.md` ga yoz (0-bo'limdagi ochiq savollar).

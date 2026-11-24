@@ -24,10 +24,14 @@ Shablon: `../Kurs-ishi/latex/shablon/asosiy.tex` (bo'lsa).
 
 (Xuddi shu jadval `manba/malumot.md` da ham bor.)
 
-## Bo'limlar (berilmagan bo'lsa Claude taklif qilgan)
-- 2.1. [..]
-- 2.2. [..]
-- 2.3. [..]
+## Mavzu manbai
+Amaliy to'plam `materiallar/adabiyotlar/3_mex (1).pdf`, [N]-mavzu: "[..]" — nazariya [..]-betlar,
+mustaqil ishlash uchun 15 ta masala [..]-betdan; javoblar jadvali: [bor (..-bet) / yo'q].
+
+## I bob bo'limlari (berilmagan bo'lsa Claude taklif qilgan)
+- 1.1. [..]
+- 1.2. [..]
+- 1.3. [..]
 
 ## Adabiyotlar (Claude `latex/materiallar/adabiyotlar-royxati.md` dan tanladi)
 Papka: `materiallar/adabiyotlar/[..]`
