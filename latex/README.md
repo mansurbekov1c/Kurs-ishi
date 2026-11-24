@@ -35,23 +35,19 @@ Word kurs ishlari tartibi (`kurs_ishi/CLAUDE.md`) bilan bir xil, faqat papkalar 
 ### Codex buyrug'i (`kurs_ishi` papkasida — `latex/` da EMAS)
 
 ```
-codex exec -m gpt-6.1-sol -c model_reasoning_effort=high --sandbox workspace-write --skip-git-repo-check -o latex/talabalar/N.Familiya_Ism/manba/codex-oxirgi-xabar.txt "Kurs-ishi/latex/codex.md ni to'liq o'qi (kurs_ishi/AGENTS.md bu vazifaga tegishli emas), keyin latex/talabalar/N.Familiya_Ism/topshiriq.md dagi vazifani unga ko'ra oxirigacha bajar."
+codex exec -m gpt-6.1-sol -c model_reasoning_effort=high -c windows.sandbox=unelevated --sandbox workspace-write --add-dir "C:\Users\abdul\AppData\Roaming\MiKTeX" --add-dir "C:\Users\abdul\AppData\Local\MiKTeX" --skip-git-repo-check -o latex/talabalar/N.Familiya_Ism/manba/codex-oxirgi-xabar.txt "Kurs-ishi/latex/codex.md ni to'liq o'qi (kurs_ishi/AGENTS.md bu vazifaga tegishli emas), keyin latex/talabalar/N.Familiya_Ism/topshiriq.md dagi vazifani unga ko'ra oxirigacha bajar."
 ```
 
-- Nega `kurs_ishi` da: Codex'ning Windows sandbox'i ish papkasidan tashqaridagi fayllarni O'QIY OLMAYDI
-  (2026-11-24 sinovda namuna PDF'ni ocholmadi). `latex/` da ishga tushsa `Kurs-ishi/` qoidalarini ko'rmaydi.
-- **Sandbox ichida `xelatex.exe` ishlamaydi** ("Access is denied", 2026-11-24). Hal bo'lguncha (pastdagi
-  "Kompilyatsiya" ga qara) Codex PDF yasay olmaydi — buni topshiriqda ayt.
+- Nega `kurs_ishi` da: Codex'ning odatiy (elevated) Windows sandbox'i ish papkasidan tashqarini o'qiy olmadi
+  (2026-11-24); qoidalar `Kurs-ishi/` da, adabiyotlar `latex/materiallar/` da — hammasi `kurs_ishi` ichida.
+- **`-c windows.sandbox=unelevated` va ikkala `--add-dir` SHART** (2026-11-24 sinovdan o'tgan). Odatiy sandbox
+  buyruqlarni alohida `CodexSandboxOffline` foydalanuvchisi nomidan ishlatadi; MiKTeX sozlamalari esa
+  foydalanuvchining reestrida (HKCU) — sandbox'da `xelatex` "fresh TeX installation"/"Access is denied" bilan
+  to'xtaydi. Unelevated rejim shu foydalanuvchi nomidan cheklangan huquq bilan ishlaydi; `--add-dir` MiKTeX'ga
+  log va keshlarini yozishga ruxsat beradi. Windows ACL'ni o'zgartirish kerak emas (sinab ko'rilgan, foyda bermadi).
 - Claude'ning shelli MiKTeX o'rnatilishidan oldin ochilgan bo'lsa, PATH'ga qo'sh:
   `%LOCALAPPDATA%\Programs\MiKTeX\miktex\bin\x64`.
 - Internet manbalari uchun: `-c sandbox_workspace_write.network_access=true`.
-
-### Kompilyatsiya (sandbox muammosi hal bo'lguncha)
-
-Codex `.tex`, rasmlar, hisob kodini yozadi va o'zi tekshira oladigan narsalarni (Python bilan hisob,
-`\ref`/`\label` mosligi) tekshiradi. PDF'ni **Claude** yasaydi: `manba/tex/` da `xelatex` 2 marta
-(`-output-directory=../tekshiruv`), logdagi xatolar va bet rasmlaridagi kamchiliklar `tuzatish.md` ga yoziladi va
-Codex qayta ishga tushiriladi. Keyin PDF va Overleaf zip'ni Claude joylaydi.
 
 ## Codex tugagach
 

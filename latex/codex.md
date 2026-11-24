@@ -20,8 +20,10 @@ Ustunlik: `topshiriq.md` > `latex/yoriqnoma.md` > umumiy `yoriqnoma.md`.
 
 ## 2. Muhit
 
-Kerak: `xelatex` (MiKTeX), Python + pdfplumber, matplotlib. `xelatex` PATH'da topilmasa:
-`%LOCALAPPDATA%\Programs\MiKTeX\miktex\bin\x64\xelatex.exe`.
+Kerak: `xelatex` (MiKTeX), Python + pdfplumber, matplotlib. `xelatex` PATH'da topilmasa, to'liq yo'l bilan chaqir:
+`& "$env:LOCALAPPDATA\Programs\MiKTeX\miktex\bin\x64\xelatex.exe" ...`.
+"Access is denied" yoki "fresh TeX installation" chiqsa — Codex noto'g'ri rejimda ishga tushirilgan
+(`-c windows.sandbox=unelevated` va MiKTeX `--add-dir` lari kerak): ishni to'xtat va hisobotga yoz.
 `major issue: So far, you have not checked for MiKTeX updates` xabari — zararsiz, e'tibor berma.
 Hech narsani o'zing o'rnatma (MiKTeX paketlari ham — sandbox'da tarmoq yo'q). Kompilyatsiya
 "File `...sty' not found" bilan to'xtasa: ishni to'xtat, `manba/hisobot.md` ga qaysi paket yetishmasligini yoz.
